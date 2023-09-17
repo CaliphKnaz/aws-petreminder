@@ -1,3 +1,5 @@
+
+
 resource "aws_lambda_function" "pet_lambda_function" {
   # If the file is not in the current working directory you will need to include a
   # path.module in the filename.
@@ -12,4 +14,9 @@ resource "aws_lambda_function" "pet_lambda_function" {
   depends_on = [ aws_iam_role.pet_lambda_role ]
   }
 
+
+output "lambda_arn" {
+  value = aws_lambda_function.pet_lambda_function.arn
+  
+}
   
