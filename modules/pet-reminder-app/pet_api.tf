@@ -1,5 +1,5 @@
 resource "aws_api_gateway_rest_api" "pet_api_gateway" {
-  name = "pet_api_gateway"
+  name = "petcuddleotron"
   endpoint_configuration {
     types = [ "REGIONAL" ]
   }

@@ -6,7 +6,7 @@ resource "aws_lambda_function" "pet_lambda_function" {
   filename      = "modules/pet-reminder-app/pet_lambda_code.zip"
   function_name = "email_reminder_function"
   role          = aws_iam_role.pet_lambda_role.arn
-  handler       = "index.handler"
+  handler       = "pet_lambda_code.lambda_handler"
 
 
   runtime = "python3.9" 
